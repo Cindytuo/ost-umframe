@@ -1,2 +1,8 @@
 # ost-umframe
-a frame-work, which base on the umi.js-2.x
+## Quick Overview
+```sh
+npm i -g ost-umframe
+ost-umframe init
+cd [my-app]
+npm run dev
+```
