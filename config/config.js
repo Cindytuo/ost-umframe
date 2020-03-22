@@ -10,6 +10,7 @@ const plugins = [
       },
       dynamicImport: {
         webpackChunkName: true,
+        loadingComponent: '../src/components/Loading/Loading.js',
       },
       title: '',
       dll: true,
