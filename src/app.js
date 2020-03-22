@@ -1,9 +1,11 @@
 import Debug from './utils/debug';
-import Buzz from '@med/buzz';
+import { traceLog } from './service/api.js';
+
 window.onerror = (message, source, lineno, colno, error) => {
   const errorLog = `:::${message}:::${source}:::${lineno}:::${colno}:::`;
-  Buzz.traceLog({
+  traceLog({
     log: encodeURIComponent(errorLog),
+    requestId: Date.now(),
     scene: 'basic',
   });
 };

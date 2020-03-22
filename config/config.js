@@ -10,8 +10,8 @@ const plugins = [
       },
       dynamicImport: {
         webpackChunkName: true,
-        loadingComponent: '../src/components/Loading/Loading.js',
       },
+      title: '',
       dll: true,
       hd: false,
       fastClick: false,
@@ -35,6 +35,7 @@ export default {
   base: '/',
   publicPath: './',
   treeShaking: true,
+  history: 'browser',
   hash: true,
   ignoreMomentLocale: true,
   routes: pageRoutes,

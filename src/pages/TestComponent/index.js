@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styles from './style.less';
 
-class TestComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Main extends React.Component {
   render() {
-    return (
-      <div>
-        <div>啦啦啦</div>
-      </div>
-    );
+    return <h1 className={styles.basic}>Hello! Welcome!</h1>;
   }
 }
-export default TestComponent;
+export default Main;
