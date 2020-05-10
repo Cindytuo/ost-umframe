@@ -1,21 +1,23 @@
 import Debug from './utils/debug';
-import { traceLog } from './service/api.js';
+import { traceLog } from 'orcrist-utils';
 
 window.onerror = (message, source, lineno, colno, error) => {
   const errorLog = `:::${message}:::${source}:::${lineno}:::${colno}:::`;
+  console.log('errorLogerrorLogerrorLog:::::', errorLog);
+
   traceLog({
     log: encodeURIComponent(errorLog),
-    requestId: Date.now(),
-    scene: 'basic',
+    scene: 'common',
   });
 };
 
 Debug && Debug();
 export const dva = {
   config: {
-    onError(err) {
+    onError(err: ErrorEvent) {
       err.preventDefault();
       console.error(err.message);
     },
   },
 };
+
